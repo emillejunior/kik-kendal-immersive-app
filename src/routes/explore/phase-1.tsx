@@ -4,6 +4,8 @@ import { ContentRenderer } from '@/components/content-renderer';
 
 import mapBg from '../../assets/kik-map-bg.jpg';
 import map1 from '../../assets/kik-map-1.png';
+import { motion } from 'motion/react';
+
 import { Button } from '@/components/ui/button';
 import { ArrowLeftCircle } from 'lucide-react';
 
@@ -36,7 +38,11 @@ function Phase1() {
           </Button>
         </div>
       </div>
-      <img
+
+      <motion.img
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
         src={map1}
         alt="phase 1 map"
         className="absolute top-0 left-0 z-1 h-full w-full object-cover"
