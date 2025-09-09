@@ -9,12 +9,14 @@ export function Header() {
   const { lang, setLang } = useI18n();
 
   return (
-    <header className="sticky top-0 z-50 flex items-center gap-4 border-b border-gray-200 px-8 py-6">
-      {/* <strong>{copy.siteTitle}</strong> */}
-
+    <header className="absolute top-0 z-50 flex w-full items-center gap-4 px-8 py-6">
       <nav className="flex items-center gap-3">
         <Link to="/" activeProps={{ style: { fontWeight: 'bold' } }}>
-          <img src={kikLogo} className="h-16 w-auto" alt="KIK logo" />
+          <img
+            src={kikLogo}
+            className="h-24 w-auto rounded-lg border border-white bg-gradient-to-tr from-white/50 via-white to-white/80 p-5"
+            alt="KIK logo"
+          />
         </Link>
       </nav>
 
@@ -33,17 +35,11 @@ export function Header() {
               aria-pressed={pressed}
               title={`${meta.label} (${meta.code})`}
               className={clsx(
-                'border p-6',
+                'border bg-white/75 p-6',
                 pressed
                   ? 'text-foreground border-foreground/80 font-bold'
                   : 'text-foreground/60 border-foreground/30 font-medium'
               )}
-              // className={clsx(
-              //   'inline-flex cursor-pointer items-center gap-1.5 rounded border px-2.5 py-1.5 text-sm transition-colors',
-              //   pressed
-              //     ? 'border-gray-500 bg-gray-100 font-bold'
-              //     : 'border-gray-300 bg-gray-50 font-medium'
-              // )}
             >
               <span aria-hidden="true" style={{ fontSize: 16, lineHeight: 1 }}>
                 {meta.flag}

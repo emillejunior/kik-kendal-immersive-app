@@ -4,11 +4,9 @@ import { Header } from '../components/header';
 
 const RootLayout = () => (
   <>
-    <div className="flex h-screen w-screen flex-col">
-      <Header />
-      <div className="relative flex-1">
-        <Outlet />
-      </div>
+    <Header />
+    <div className="relative h-screen w-full">
+      <Outlet />
     </div>
     <TanStackRouterDevtools />
   </>

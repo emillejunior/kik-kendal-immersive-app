@@ -21,7 +21,7 @@ const TRANSLATIONS = {
     },
     pages: {
       index: {
-        title: 'Welcome',
+        title: 'Welcome to Kendal Industrial Park',
         blocks: [
           {
             type: 'heading',
@@ -69,7 +69,7 @@ const TRANSLATIONS = {
     },
     pages: {
       index: {
-        title: '환영합니다',
+        title: `"켄달 산업단지"에 오신 것을 환영합니다`,
         blocks: [
           {
             type: 'heading',

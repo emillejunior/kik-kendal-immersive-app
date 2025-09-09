@@ -16,7 +16,7 @@ function Phase2() {
 
   return (
     <>
-      <div className="absolute top-10 right-10 z-10 flex w-1/4 flex-col gap-4 p-8">
+      <div className="absolute top-25 right-10 z-10 flex w-1/4 flex-col gap-4 p-8">
         <div className="bg-foreground/10 flex flex-col items-center gap-8 rounded-2xl p-4 text-right text-white">
           <h1 className="py-4 text-4xl font-bold">{copy.pages.phase2.title}</h1>
           <div className="text-white">
