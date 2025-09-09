@@ -16,9 +16,9 @@ function explore() {
   return (
     <>
       <div className="absolute top-25 right-10 z-10 flex w-1/4 flex-col gap-4 p-8">
-        <div className="bg-foreground/10 flex flex-col items-center gap-8 rounded-2xl p-4 text-right">
-          <h1 className="py-4 text-4xl font-bold text-white">{copy.pages.explore.title}</h1>
-          <div className="text-white">
+        <div className="bg-background/50 flex flex-col items-center gap-8 rounded-2xl p-4 text-right">
+          <h1 className="text-foreground py-4 text-4xl font-bold">{copy.pages.explore.title}</h1>
+          <div className="text-foreground">
             {copy.pages.explore.blocks.map(block => (
               <ContentRenderer block={block} />
             ))}
@@ -46,7 +46,7 @@ function explore() {
       <img
         src={mapBg}
         alt="map background"
-        className="absolute top-0 left-0 z-0 h-full w-full object-cover"
+        className="absolute top-0 left-0 z-0 h-full w-full object-cover dark:opacity-25"
       />
     </>
   );
