@@ -41,7 +41,7 @@ const TRANSLATIONS = {
       },
       explore: {
         title: 'Explore KIK',
-        blocks: [{ type: 'text', content: 'Pick a phase to explore.' }] as ContentBlock[],
+        blocks: [{ type: 'text', content: 'Select a phase to explore.' }] as ContentBlock[],
       },
       phase1: {
         title: 'Phase 1',

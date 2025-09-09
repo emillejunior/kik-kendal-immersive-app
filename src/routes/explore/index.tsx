@@ -15,20 +15,22 @@ function explore() {
 
   return (
     <>
-      <div className="absolute top-10 right-10 z-10 p-2">
-        <div className="flex flex-col items-center gap-8 py-4 text-right text-white">
-          <h1 className="py-4 text-2xl font-bold">{copy.pages.explore.title}</h1>
-          {copy.pages.explore.blocks.map(block => (
-            <ContentRenderer block={block} />
-          ))}
-        </div>
-        <div className="flex flex-col items-center justify-center gap-3 rounded-lg border bg-gray-100 p-5 text-right">
-          <Button size={'lg'} variant={'outline'} asChild>
-            <Link to="/explore/phase-1">{copy.nav.phase1}</Link>
-          </Button>
-          <Button size={'lg'} variant={'outline'} asChild>
-            <Link to="/explore/phase-2">{copy.nav.phase2}</Link>
-          </Button>
+      <div className="absolute top-10 right-10 z-10 flex w-1/4 flex-col gap-4 p-8">
+        <div className="bg-foreground/10 flex flex-col items-center gap-8 rounded-2xl p-4 text-right">
+          <h1 className="py-4 text-4xl font-bold text-white">{copy.pages.explore.title}</h1>
+          <div className="text-white">
+            {copy.pages.explore.blocks.map(block => (
+              <ContentRenderer block={block} />
+            ))}
+          </div>
+          <div className="flex w-full flex-col items-center justify-center gap-3 text-right">
+            <Button size={'lg'} className="w-full" variant={'outline'} asChild>
+              <Link to="/explore/phase-1">{copy.nav.phase1}</Link>
+            </Button>
+            <Button size={'lg'} className="w-full" variant={'outline'} asChild>
+              <Link to="/explore/phase-2">{copy.nav.phase2}</Link>
+            </Button>
+          </div>
         </div>
       </div>
       <img
