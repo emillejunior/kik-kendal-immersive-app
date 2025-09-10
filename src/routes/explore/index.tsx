@@ -45,12 +45,12 @@ function explore() {
         <img
           src={map1}
           alt="phase 1 map"
-          className="absolute top-0 left-0 z-1 h-full w-full object-cover"
+          className="pointer-events-none absolute top-0 left-0 z-1 h-full w-full object-cover"
         />
         <img
           src={map2}
           alt="phase 2 map"
-          className="absolute top-0 left-0 z-1 h-full w-full object-cover"
+          className="pointer-events-none absolute top-0 left-0 z-1 h-full w-full object-cover"
         />
       </motion.div>
       <motion.img
@@ -59,7 +59,7 @@ function explore() {
         transition={{ duration: 0.5 }}
         src={mapBg}
         alt="map background"
-        className="absolute top-0 left-0 z-0 h-full w-full object-cover dark:opacity-25"
+        className="pointer-events-none absolute top-0 left-0 z-0 h-full w-full object-cover dark:opacity-25"
       />
     </>
   );
