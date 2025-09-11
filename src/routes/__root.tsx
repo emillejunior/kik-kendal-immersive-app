@@ -11,7 +11,7 @@ const RootLayout = () => (
     <div
       // className="relative h-screen w-full bg-[url('/pattern.png')] bg-center bg-repeat"
       // style={{ backgroundSize: '40px auto' }}
-      className="relative h-screen w-full"
+      className="relative h-screen w-full overflow-hidden"
     >
       <Outlet />
       <div
