@@ -9,6 +9,7 @@ import { motion } from 'motion/react';
 
 import { Button } from '@/components/ui/button';
 import { ArrowLeftCircle } from 'lucide-react';
+import { useTheme } from '@/components/theme-provider';
 
 export const Route = createFileRoute('/explore/phase-2')({
   component: Phase2,
@@ -16,6 +17,7 @@ export const Route = createFileRoute('/explore/phase-2')({
 
 function Phase2() {
   const { copy } = useI18n();
+  const { theme } = useTheme();
 
   return (
     <>
@@ -49,7 +51,7 @@ function Phase2() {
         className="pointer-events-none absolute top-0 left-0 z-1 h-full w-full object-cover"
       />
       <motion.img
-        animate={{ scale: 1, opacity: 1 }}
+        animate={{ scale: 1, opacity: theme === 'dark' ? 0.25 : 1 }}
         initial={{ scale: 1.05, opacity: 0 }}
         transition={{ duration: 1 }}
         src={mapBg}
