@@ -1,12 +1,13 @@
 import React from 'react';
 import type { ContentBlock } from './types';
 
-export type Lang = 'en' | 'ko';
+export type Lang = 'en' | 'ko' | 'zh';
 
 // Static, locale-independent labels for the header
 export const LANG_META: Record<Lang, { label: string; flag: string; code: string }> = {
   en: { label: 'English', flag: '🇺🇸', code: 'EN' },
   ko: { label: '한국어', flag: '🇰🇷', code: 'KO' },
+  zh: { label: '中文', flag: '🇨🇳', code: 'ZH' },
 };
 
 const TRANSLATIONS = {
@@ -55,7 +56,7 @@ const TRANSLATIONS = {
         title: 'About',
         blocks: [{ type: 'text', content: 'This site is built by Digipro PRS' }] as ContentBlock[],
       },
-      lang: { en: 'English', ko: 'Korean' },
+      lang: { en: 'English', ko: 'Korean', zh: 'Chinese' },
     },
   },
   ko: {
@@ -94,7 +95,55 @@ const TRANSLATIONS = {
         title: '소개',
         blocks: [{ type: 'text', content: '이 사이트는 "Digipro PRS"에 의해 구축되었습니다.' }],
       },
-      lang: { en: '영어', ko: '한국어' },
+      lang: { en: '영어', ko: '한국어', zh: '중국어' },
+    },
+  },
+  zh: {
+    siteTitle: '肯达尔工业园区',
+    nav: {
+      home: '首页',
+      explore: '探索',
+      about: '关于',
+      phase1: '第一阶段',
+      phase2: '第二阶段',
+    },
+    pages: {
+      index: {
+        title: '欢迎来到肯达尔工业园区',
+        blocks: [
+          {
+            type: 'heading',
+            level: 2,
+            content: '我们的使命',
+          },
+          {
+            type: 'text',
+            content: '我们致力于支持肯达尔的可持续工业发展。',
+          },
+          {
+            type: 'image',
+            src: '/images/factory.jpg',
+            alt: '工厂全景',
+          },
+        ] as ContentBlock[],
+      },
+      explore: {
+        title: '探索',
+        blocks: [{ type: 'text', content: '请选择一个阶段进行探索。' }] as ContentBlock[],
+      },
+      phase1: {
+        title: '第一阶段',
+        blocks: [{ type: 'text', content: '第一阶段的详细信息。' }] as ContentBlock[],
+      },
+      phase2: {
+        title: '第二阶段',
+        blocks: [{ type: 'text', content: '第二阶段的详细信息。' }] as ContentBlock[],
+      },
+      about: {
+        title: '关于',
+        blocks: [{ type: 'text', content: '本网站由 Digipro PRS 构建。' }] as ContentBlock[],
+      },
+      lang: { en: '英文', ko: '韩文', zh: '中文' },
     },
   },
 } as const;
