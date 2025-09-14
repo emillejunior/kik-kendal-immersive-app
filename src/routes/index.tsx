@@ -89,11 +89,11 @@ function Index() {
           className="h-64 w-auto dark:opacity-10 dark:invert"
           alt="KIK Watermark"
         />
-        <Button className="rounded-full p-8" asChild>
+        {/* <Button className="rounded-full p-8" asChild>
           <Link to="/explore" className="flex items-center gap-2">
             {copy.nav.explore} <ChevronRightCircle />
           </Link>
-        </Button>
+        </Button> */}
       </div>
     </div>
   );
