@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import "tw-animate-css";
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -40,6 +40,12 @@ body {
   min-width: 320px;
   min-height: 100vh;
 } */
+
+html,
+body {
+  overflow: hidden;
+  touch-action: manipulation;
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
