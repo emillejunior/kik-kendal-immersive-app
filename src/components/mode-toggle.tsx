@@ -8,9 +8,17 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useTheme } from '@/components/theme-provider';
+import { useSwitchSound } from '@/hooks/useSound';
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
+
+  const playSwitch = useSwitchSound(0.3);
+
+  const handleThemeChange = (theme: 'light' | 'dark' | 'system') => {
+    playSwitch();
+    setTheme(theme);
+  };
 
   return (
     <DropdownMenu>
@@ -22,9 +30,9 @@ export function ModeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme('light')}>Light</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('dark')}>Dark</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('system')}>System</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => handleThemeChange('light')}>Light</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => handleThemeChange('dark')}>Dark</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => handleThemeChange('system')}>System</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

@@ -45,9 +45,8 @@ export function Header() {
       {/* <div style={{ marginLeft: 'auto' }} /> */}
 
       {/* Language selector and mode toggle */}
-      <div className="flex items-center justify-end gap-4">
-        <ModeToggle />
-        <div role="group" aria-label="Language selector" style={{ display: 'flex', gap: 8 }}>
+      <div className="flex items-center justify-end gap-10">
+        <div role="group" aria-label="Language selector" className="flex gap-5">
           {(Object.keys(LANG_META) as Lang[]).map(code => {
             const meta = LANG_META[code];
             const pressed = lang === code;
@@ -55,6 +54,7 @@ export function Header() {
               <Button
                 key={code}
                 variant={'ghost'}
+                size={pressed ? 'lg' : 'icon'}
                 onClick={() => setLang(code)}
                 aria-pressed={pressed}
                 title={`${meta.label} (${meta.code})`}
@@ -65,15 +65,20 @@ export function Header() {
                     : 'text-foreground/60 border-foreground/30 font-medium'
                 )}
               >
-                <span aria-hidden="true" style={{ fontSize: 16, lineHeight: 1 }}>
+                <span aria-hidden="true" style={{ fontSize: 24, lineHeight: 1 }}>
                   {meta.flag}
                 </span>
-                <span>{meta.label}</span>
-                <span style={{ opacity: 0.6, fontSize: 12 }}>{meta.code}</span>
+                {pressed ? (
+                  <span>{meta.label}</span>
+                ) : (
+                  <></>
+                  // <span style={{ opacity: 0.6, fontSize: 12 }}>{meta.code}</span>
+                )}
               </Button>
             );
           })}
         </div>
+        <ModeToggle />
       </div>
     </header>
   );
