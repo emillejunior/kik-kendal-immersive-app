@@ -10,7 +10,7 @@ import sembcorpLogo from '../assets/logosembcorp.png';
 import { useI18n } from '../i18n';
 import { Button } from '@/components/ui/button';
 import { motion } from 'motion/react';
-import { ChevronRightCircle } from 'lucide-react';
+// import { ChevronRightCircle } from 'lucide-react';
 
 export const Route = createFileRoute('/')({
   component: Index,
