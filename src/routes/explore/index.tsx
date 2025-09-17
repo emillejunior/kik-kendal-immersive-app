@@ -20,14 +20,14 @@ function explore() {
   return (
     <>
       <div className="absolute top-25 right-10 z-10 flex w-1/4 flex-col gap-4 p-8">
-        <div className="bg-background/20 flex flex-col items-center gap-8 rounded-2xl p-4 text-right">
+        <div className="bg-background/20 flex flex-col items-center gap-8 rounded-2xl p-4 text-center">
           <h1 className="text-foreground py-4 text-4xl font-bold">{copy.pages.explore.title}</h1>
           <div className="text-foreground">
             {copy.pages.explore.blocks.map(block => (
               <ContentRenderer block={block} />
             ))}
           </div>
-          <div className="flex w-full flex-col items-center justify-center gap-3 text-right">
+          <div className="flex w-full flex-col items-center justify-center gap-3 text-center">
             <Button size={'lg'} className="w-full" variant={'outline'} asChild>
               <Link to="/explore/phase-1">{copy.nav.phase1}</Link>
             </Button>

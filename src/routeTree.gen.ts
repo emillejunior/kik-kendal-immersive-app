@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PlayIndexRouteImport } from './routes/play/index'
 import { Route as ExploreIndexRouteImport } from './routes/explore/index'
 import { Route as ExplorePhase2RouteImport } from './routes/explore/phase-2'
 import { Route as ExplorePhase1RouteImport } from './routes/explore/phase-1'
@@ -23,6 +24,11 @@ const AboutRoute = AboutRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlayIndexRoute = PlayIndexRouteImport.update({
+  id: '/play/',
+  path: '/play/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ExploreIndexRoute = ExploreIndexRouteImport.update({
@@ -47,6 +53,7 @@ export interface FileRoutesByFullPath {
   '/explore/phase-1': typeof ExplorePhase1Route
   '/explore/phase-2': typeof ExplorePhase2Route
   '/explore': typeof ExploreIndexRoute
+  '/play': typeof PlayIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByTo {
   '/explore/phase-1': typeof ExplorePhase1Route
   '/explore/phase-2': typeof ExplorePhase2Route
   '/explore': typeof ExploreIndexRoute
+  '/play': typeof PlayIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,6 +70,7 @@ export interface FileRoutesById {
   '/explore/phase-1': typeof ExplorePhase1Route
   '/explore/phase-2': typeof ExplorePhase2Route
   '/explore/': typeof ExploreIndexRoute
+  '/play/': typeof PlayIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -71,8 +80,15 @@ export interface FileRouteTypes {
     | '/explore/phase-1'
     | '/explore/phase-2'
     | '/explore'
+    | '/play'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/explore/phase-1' | '/explore/phase-2' | '/explore'
+  to:
+    | '/'
+    | '/about'
+    | '/explore/phase-1'
+    | '/explore/phase-2'
+    | '/explore'
+    | '/play'
   id:
     | '__root__'
     | '/'
@@ -80,6 +96,7 @@ export interface FileRouteTypes {
     | '/explore/phase-1'
     | '/explore/phase-2'
     | '/explore/'
+    | '/play/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -88,6 +105,7 @@ export interface RootRouteChildren {
   ExplorePhase1Route: typeof ExplorePhase1Route
   ExplorePhase2Route: typeof ExplorePhase2Route
   ExploreIndexRoute: typeof ExploreIndexRoute
+  PlayIndexRoute: typeof PlayIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -104,6 +122,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play/': {
+      id: '/play/'
+      path: '/play'
+      fullPath: '/play'
+      preLoaderRoute: typeof PlayIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/explore/': {
@@ -136,6 +161,7 @@ const rootRouteChildren: RootRouteChildren = {
   ExplorePhase1Route: ExplorePhase1Route,
   ExplorePhase2Route: ExplorePhase2Route,
   ExploreIndexRoute: ExploreIndexRoute,
+  PlayIndexRoute: PlayIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

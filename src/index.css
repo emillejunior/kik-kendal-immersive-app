@@ -44,7 +44,9 @@ body {
 html,
 body {
   overflow: hidden;
-  touch-action: manipulation;
+  touch-action: none; /* allow taps, block pinch/double-tap zoom */
+  overscroll-behavior: none; /* prevent scroll bars */
+  user-select: none;
 }
 
 @theme inline {

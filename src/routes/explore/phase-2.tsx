@@ -22,7 +22,7 @@ function Phase2() {
   return (
     <>
       <div className="absolute top-25 right-10 z-10 flex w-1/4 flex-col gap-4 p-8">
-        <div className="bg-background/50 flex flex-col items-center gap-8 rounded-2xl p-4 text-right">
+        <div className="bg-background/50 flex flex-col items-center gap-8 rounded-2xl p-4 text-center">
           <h1 className="text-foreground py-4 text-4xl font-bold">{copy.pages.phase2.title}</h1>
           <div className="text-foreground">
             {copy.pages.phase2.blocks.map(block => (
@@ -30,7 +30,7 @@ function Phase2() {
             ))}
           </div>
         </div>
-        <div className="flex w-full items-center justify-center gap-3 text-right">
+        <div className="flex w-full items-center justify-center gap-3 text-center">
           <Button size={'icon'} variant={'secondary'} asChild>
             <Link to="/explore">
               <ArrowLeftCircle className="h-12 w-12" />
