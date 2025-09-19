@@ -3,11 +3,9 @@ import { useI18n } from '../../i18n';
 import { Button } from '../../components/ui/button';
 import { ContentRenderer } from '@/components/content-renderer';
 import mapBg from '../../assets/kik-map-bg.jpg';
-// import map1 from '../../assets/kik-map-1.png';
-// import map2 from '../../assets/kik-map-2.png';
-import mapSvg from '../../assets/map.svg';
 import { motion } from 'motion/react';
 import { useTheme } from '@/components/theme-provider';
+import Map from '@/components/map';
 
 export const Route = createFileRoute('/explore/')({
   component: explore,
@@ -37,31 +35,7 @@ function explore() {
           </div>
         </div>
       </div>
-      <motion.div
-        animate={{ opacity: 1 }}
-        initial={{ opacity: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
-        className="absolute top-0 left-0 z-1 h-full w-full"
-      >
-        {/* <img
-          src={map1}
-          alt="phase 1 map"
-          className="pointer-events-none absolute top-0 left-0 z-1 h-full w-full object-cover"
-        />
-        <img
-          src={map2}
-          alt="phase 2 map"
-          className="pointer-events-none absolute top-0 left-0 z-1 h-full w-full object-cover"
-        /> */}
-        <motion.img
-          animate={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          transition={{ duration: 1, delay: 1.1 }}
-          src={mapSvg}
-          alt="Map"
-          className="pointer-events-none absolute top-0 left-0 z-1 h-full w-full object-cover"
-        />
-      </motion.div>
+      <Map />
       <motion.img
         animate={{ opacity: theme === 'dark' ? 0.25 : 1 }}
         initial={{ opacity: 0 }}

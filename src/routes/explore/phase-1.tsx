@@ -3,12 +3,13 @@ import { useI18n } from '../../i18n';
 import { ContentRenderer } from '@/components/content-renderer';
 
 import mapBg from '../../assets/kik-map-bg.jpg';
-import map1svg from '../../assets/map1.svg';
+
 import { motion } from 'motion/react';
 
 import { Button } from '@/components/ui/button';
 import { ArrowLeftCircle } from 'lucide-react';
 import { useTheme } from '@/components/theme-provider';
+import MapPhase1 from '@/components/map-phase-1';
 
 export const Route = createFileRoute('/explore/phase-1')({
   component: Phase1,
@@ -40,15 +41,7 @@ function Phase1() {
           </Button>
         </div>
       </div>
-
-      <motion.img
-        animate={{ opacity: 1 }}
-        initial={{ opacity: 0 }}
-        transition={{ duration: 1, delay: 1.1 }}
-        src={map1svg}
-        alt="phase 1 map"
-        className="pointer-events-none absolute top-0 left-0 z-1 h-full w-full object-cover"
-      />
+      <MapPhase1 />
       <motion.img
         animate={{ scale: 1, opacity: theme === 'dark' ? 0.25 : 1 }}
         initial={{ scale: 1.05, opacity: 0 }}
