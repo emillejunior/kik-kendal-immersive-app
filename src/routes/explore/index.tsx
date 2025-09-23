@@ -1,11 +1,17 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
-import { useI18n } from '../../i18n';
+import { motion } from 'motion/react';
+
+// assets
+import mapBg from '../../assets/kik-map-bg.jpg';
+
+// components
 import { Button } from '../../components/ui/button';
 import { ContentRenderer } from '@/components/content-renderer';
-import mapBg from '../../assets/kik-map-bg.jpg';
-import { motion } from 'motion/react';
+import { MapFull } from '@/components/map/map-full';
+
+// hooks
+import { useI18n } from '../../i18n';
 import { useTheme } from '@/components/theme-provider';
-import Map from '@/components/map';
 
 export const Route = createFileRoute('/explore/')({
   component: explore,
@@ -35,7 +41,7 @@ function explore() {
           </div>
         </div>
       </div>
-      <Map />
+      <MapFull />
       <motion.img
         animate={{ opacity: theme === 'dark' ? 0.25 : 1 }}
         initial={{ opacity: 0 }}

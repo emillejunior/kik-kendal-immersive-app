@@ -1,6 +1,4 @@
-// Make this component takes options to show phase 1, phase 2, or both
-
-export default function Outline({ phase }: { phase: 'phase-1' | 'phase-2' | 'both' }) {
+export function OutlineSvg({ phase }: { phase: 'phase-1' | 'phase-2' | 'both' }) {
   console.log(phase);
   return (
     <>

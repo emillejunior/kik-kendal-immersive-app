@@ -1,10 +1,12 @@
-import MainRoads from './main-roads';
-import Outline from './outline';
-import Phase2 from './phase-2';
-import SecondaryRoads from './secondary-roads';
 import { motion } from 'motion/react';
 
-export default function MapPhase2() {
+// assets
+import { MainRoadsSvg } from './svg/main-roads';
+import { OutlineSvg } from './svg/outline';
+import { Phase2Svg } from './svg/phase-2';
+import { SecondaryRoadsSvg } from './svg/secondary-roads';
+
+export function MapPhase2() {
   return (
     <svg
       width="1920"
@@ -22,7 +24,7 @@ export default function MapPhase2() {
           animate={{ opacity: [0, 0.2, 0] }}
           transition={{ duration: 0.33, ease: 'easeInOut', repeat: 2, delay: 1.5 }}
         >
-          <Outline phase="phase-2" />
+          <OutlineSvg phase="phase-2" />
         </motion.g>
 
         <motion.g
@@ -30,15 +32,15 @@ export default function MapPhase2() {
           initial={{ opacity: 0 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          <SecondaryRoads />
-          <MainRoads />
+          <SecondaryRoadsSvg />
+          <MainRoadsSvg />
         </motion.g>
         <motion.g
           animate={{ opacity: 1 }}
           initial={{ opacity: 0 }}
           transition={{ duration: 1, delay: 3 }}
         >
-          <Phase2 />
+          <Phase2Svg />
         </motion.g>
       </g>
     </svg>

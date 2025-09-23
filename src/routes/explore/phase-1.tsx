@@ -1,15 +1,18 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
-import { useI18n } from '../../i18n';
-import { ContentRenderer } from '@/components/content-renderer';
-
-import mapBg from '../../assets/kik-map-bg.jpg';
-
 import { motion } from 'motion/react';
 
-import { Button } from '@/components/ui/button';
+// assets
+import mapBg from '../../assets/kik-map-bg.jpg';
 import { ArrowLeftCircle } from 'lucide-react';
+
+// components
+import { Button } from '@/components/ui/button';
+import { ContentRenderer } from '@/components/content-renderer';
+import { MapPhase1 } from '@/components/map/map-phase-1';
+
+// hooks
+import { useI18n } from '../../i18n';
 import { useTheme } from '@/components/theme-provider';
-import MapPhase1 from '@/components/map-phase-1';
 
 export const Route = createFileRoute('/explore/phase-1')({
   component: Phase1,

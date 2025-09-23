@@ -1,4 +1,4 @@
-export default function SecondaryRoads() {
+export function SecondaryRoadsSvg() {
   return (
     <path
       id="secodary-roads"

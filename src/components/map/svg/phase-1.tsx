@@ -1,4 +1,4 @@
-export default function Phase1() {
+export function Phase1Svg() {
   return (
     <g id="phase-1">
       <g id="sector-6">

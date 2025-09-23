@@ -1,4 +1,4 @@
-export default function MainRoads() {
+export function MainRoadsSvg() {
   return (
     <path
       id="main-roads"

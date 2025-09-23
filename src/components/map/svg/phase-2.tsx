@@ -1,4 +1,4 @@
-export default function Phase2() {
+export function Phase2Svg() {
   return (
     <g id="phase-2">
       <path
