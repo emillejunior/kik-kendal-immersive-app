@@ -1,6 +1,10 @@
-import { Button } from '@/components/ui/button';
 import { createFileRoute, Link } from '@tanstack/react-router';
+
+// assets
 import { ChevronRight } from 'lucide-react';
+
+// components
+import { Button } from '@/components/ui/button';
 
 export const Route = createFileRoute('/play/')({
   component: play,

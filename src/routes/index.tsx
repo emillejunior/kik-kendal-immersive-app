@@ -1,13 +1,16 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
-
-import logo from '../assets/logo.png';
-import logoW from '../assets/logo-w.png';
-import jababekaLogo from '../assets/logojababeka.png';
-import jababekaLogoW from '../assets/logojababeka-w.png';
-import sembcorpLogo from '../assets/logosembcorp.png';
-import { useI18n } from '../i18n';
 import { motion } from 'motion/react';
+
+// assets
 import { ChevronRight, Play } from 'lucide-react';
+import logo from '../assets/logo/logo.png';
+import logoW from '../assets/logo/logo-w.png';
+import jababekaLogo from '../assets/logo/logojababeka.png';
+import jababekaLogoW from '../assets/logo/logojababeka-w.png';
+import sembcorpLogo from '../assets/logo/logosembcorp.png';
+
+// i18n
+import { useI18n } from '../i18n';
 
 export const Route = createFileRoute('/')({
   component: Index,

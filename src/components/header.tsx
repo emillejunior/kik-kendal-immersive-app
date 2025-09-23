@@ -1,12 +1,17 @@
 import { Link, useLocation } from '@tanstack/react-router';
-import { LANG_META, useI18n, type Lang } from '../i18n';
 import clsx from 'clsx';
+import { motion } from 'motion/react';
 
-import kikLogo from '../assets/logokik.png';
+// i18n
+import { LANG_META, useI18n, type Lang } from '../i18n';
+
+// assets
+import kikLogo from '../assets/logo/logokik.png';
+import sezLogo from '../assets/logo/logosez.png';
+
+// components
 import { Button } from './ui/button';
 import { ModeToggle } from './mode-toggle';
-import sezLogo from '../assets/logosez.png';
-import { motion } from 'motion/react';
 
 export function Header() {
   const { lang, setLang } = useI18n();
