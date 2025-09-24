@@ -24,26 +24,64 @@ const TRANSLATIONS = {
       index: {
         title: 'Welcome to Kendal Industrial Park',
         blocks: [
-          { type: 'heading', level: 2, content: 'Our Mission' },
-          { type: 'text', content: 'We aim to support sustainable industrial growth in Kendal.' },
-          { type: 'image', src: '/images/factory.jpg', alt: 'Factory overview' },
+          {
+            id: 'a1',
+            type: 'heading',
+            level: 2,
+            content: 'Our Mission',
+          },
+          {
+            id: 'a2',
+            type: 'text',
+            content: 'We aim to support sustainable industrial growth in Kendal.',
+          },
+          {
+            id: 'a3',
+            type: 'image',
+            src: '/images/factory.jpg',
+            alt: 'Factory overview',
+          },
         ] as ContentBlock[],
       },
       explore: {
         title: 'Explore KIK',
-        blocks: [{ type: 'text', content: 'Select a phase to explore.' }],
+        blocks: [
+          {
+            id: 'b1',
+            type: 'text',
+            content: 'Select a phase to explore.',
+          },
+        ],
       },
       phase1: {
         title: 'Pioneer Hub',
-        blocks: [{ type: 'text', content: 'Details for the Pioneer Hub.' }],
+        blocks: [
+          {
+            id: 'c1',
+            type: 'text',
+            content: 'Details for the Pioneer Hub.',
+          },
+        ],
       },
       phase2: {
         title: 'Future Development',
-        blocks: [{ type: 'text', content: 'Details for the Future Development.' }],
+        blocks: [
+          {
+            id: 'd1',
+            type: 'text',
+            content: 'Details for the Future Development.',
+          },
+        ],
       },
       about: {
         title: 'About',
-        blocks: [{ type: 'text', content: 'This site is built by Digipro PRS' }],
+        blocks: [
+          {
+            id: 'e1',
+            type: 'text',
+            content: 'This site is built by Digipro PRS',
+          },
+        ],
       },
       lang: { en: 'English', ko: 'Korean', zh: 'Chinese' },
     },
@@ -62,29 +100,64 @@ const TRANSLATIONS = {
       index: {
         title: `"켄달 산업단지"에 오신 것을 환영합니다`,
         blocks: [
-          { type: 'heading', level: 2, content: '우리의 사명' },
           {
+            id: 'a1',
+            type: 'heading',
+            level: 2,
+            content: '우리의 사명',
+          },
+          {
+            id: 'a2',
             type: 'text',
             content: '우리는 켄달의 지속 가능한 산업 성장을 지원하는 것을 목표로 합니다.',
           },
-          { type: 'image', src: '/images/factory.jpg', alt: '공장 전경' },
+          {
+            id: 'a3',
+            type: 'image',
+            src: '/images/factory.jpg',
+            alt: '공장 전경',
+          },
         ] as ContentBlock[],
       },
       explore: {
         title: '탐색',
-        blocks: [{ type: 'text', content: '단계를 선택하세요.' }],
+        blocks: [
+          {
+            id: 'b1',
+            type: 'text',
+            content: '단계를 선택하세요.',
+          },
+        ],
       },
       phase1: {
         title: '파이오니어 허브',
-        blocks: [{ type: 'text', content: '파이오니어 허브에 대한 상세 정보입니다.' }],
+        blocks: [
+          {
+            id: 'c1',
+            type: 'text',
+            content: '파이오니어 허브에 대한 상세 정보입니다.',
+          },
+        ],
       },
       phase2: {
         title: '미래 개발',
-        blocks: [{ type: 'text', content: '미래 개발에 대한 상세 정보입니다.' }],
+        blocks: [
+          {
+            id: 'd1',
+            type: 'text',
+            content: '미래 개발에 대한 상세 정보입니다.',
+          },
+        ],
       },
       about: {
         title: '소개',
-        blocks: [{ type: 'text', content: '이 사이트는 "Digipro PRS"에 의해 구축되었습니다.' }],
+        blocks: [
+          {
+            id: 'e1',
+            type: 'text',
+            content: '이 사이트는 "Digipro PRS"에 의해 구축되었습니다.',
+          },
+        ],
       },
       lang: { en: '영어', ko: '한국어', zh: '중국어' },
     },
@@ -103,26 +176,64 @@ const TRANSLATIONS = {
       index: {
         title: '欢迎来到肯达尔工业园区',
         blocks: [
-          { type: 'heading', level: 2, content: '我们的使命' },
-          { type: 'text', content: '我们致力于支持肯达尔的可持续工业发展。' },
-          { type: 'image', src: '/images/factory.jpg', alt: '工厂全景' },
+          {
+            id: 'a1',
+            type: 'heading',
+            level: 2,
+            content: '我们的使命',
+          },
+          {
+            id: 'a2',
+            type: 'text',
+            content: '我们致力于支持肯达尔的可持续工业发展。',
+          },
+          {
+            id: 'a3',
+            type: 'image',
+            src: '/images/factory.jpg',
+            alt: '工厂全景',
+          },
         ] as ContentBlock[],
       },
       explore: {
         title: '探索',
-        blocks: [{ type: 'text', content: '请选择一个阶段进行探索。' }],
+        blocks: [
+          {
+            id: 'b1',
+            type: 'text',
+            content: '请选择一个阶段进行探索。',
+          },
+        ],
       },
       phase1: {
         title: '先锋中心',
-        blocks: [{ type: 'text', content: '关于先锋中心的详细信息。' }],
+        blocks: [
+          {
+            id: 'c1',
+            type: 'text',
+            content: '关于先锋中心的详细信息。',
+          },
+        ],
       },
       phase2: {
         title: '未来开发',
-        blocks: [{ type: 'text', content: '关于未来开发的详细信息。' }],
+        blocks: [
+          {
+            id: 'd1',
+            type: 'text',
+            content: '关于未来开发的详细信息。',
+          },
+        ],
       },
       about: {
         title: '关于',
-        blocks: [{ type: 'text', content: '本网站由 Digipro PRS 构建。' }],
+        blocks: [
+          {
+            id: 'e1',
+            type: 'text',
+            content: '本网站由 Digipro PRS 构建。',
+          },
+        ],
       },
       lang: { en: '英文', ko: '韩文', zh: '中文' },
     },

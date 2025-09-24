@@ -29,7 +29,7 @@ function Phase1() {
           <h1 className="text-foreground py-4 text-4xl font-bold">{copy.pages.phase1.title}</h1>
           <div className="text-foreground">
             {copy.pages.phase1.blocks.map(block => (
-              <ContentRenderer block={block} />
+              <ContentRenderer block={block} key={block.id} />
             ))}
           </div>
         </div>

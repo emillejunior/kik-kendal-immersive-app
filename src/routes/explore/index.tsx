@@ -28,7 +28,7 @@ function explore() {
           <h1 className="text-foreground py-4 text-4xl font-bold">{copy.pages.explore.title}</h1>
           <div className="text-foreground">
             {copy.pages.explore.blocks.map(block => (
-              <ContentRenderer block={block} />
+              <ContentRenderer block={block} key={block.id} />
             ))}
           </div>
           <div className="flex w-full flex-col items-center justify-center gap-3 text-center">

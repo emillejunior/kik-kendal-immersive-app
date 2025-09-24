@@ -14,7 +14,7 @@ function About() {
       <div className="flex flex-col items-center gap-8">
         <h1 className="py-8 text-2xl font-bold">{copy.pages.about.title}</h1>
         {copy.pages.about.blocks.map(block => (
-          <ContentRenderer block={block} />
+          <ContentRenderer block={block} key={block.id} />
         ))}
       </div>
     </div>
