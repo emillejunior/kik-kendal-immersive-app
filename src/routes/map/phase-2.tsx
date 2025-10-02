@@ -14,7 +14,7 @@ import { MapPhase2 } from '@/components/map/map-phase-2';
 import { useI18n } from '../../i18n';
 import { useTheme } from '@/components/theme-provider';
 
-export const Route = createFileRoute('/explore/phase-2')({
+export const Route = createFileRoute('/map/phase-2')({
   component: Phase2,
 });
 
@@ -35,12 +35,12 @@ function Phase2() {
         </div>
         <div className="flex w-full items-center justify-center gap-3 text-center">
           <Button size={'icon'} variant={'secondary'} asChild>
-            <Link to="/explore">
+            <Link to="/map">
               <ArrowLeftCircle className="h-12 w-12" />
             </Link>
           </Button>
           <Button size={'lg'} variant={'outline'} asChild>
-            <Link to="/explore/phase-1">{copy.nav.phase1}</Link>
+            <Link to="/map/phase-1">{copy.nav.phase1}</Link>
           </Button>
         </div>
       </div>

@@ -11,10 +11,14 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as TestimoniesIndexRouteImport } from './routes/testimonies/index'
 import { Route as PlayIndexRouteImport } from './routes/play/index'
+import { Route as MicroInfrastructureIndexRouteImport } from './routes/micro-infrastructure/index'
+import { Route as MapIndexRouteImport } from './routes/map/index'
 import { Route as ExploreIndexRouteImport } from './routes/explore/index'
-import { Route as ExplorePhase2RouteImport } from './routes/explore/phase-2'
-import { Route as ExplorePhase1RouteImport } from './routes/explore/phase-1'
+import { Route as BenefitsIndexRouteImport } from './routes/benefits/index'
+import { Route as MapPhase2RouteImport } from './routes/map/phase-2'
+import { Route as MapPhase1RouteImport } from './routes/map/phase-1'
 
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
@@ -26,9 +30,25 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TestimoniesIndexRoute = TestimoniesIndexRouteImport.update({
+  id: '/testimonies/',
+  path: '/testimonies/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PlayIndexRoute = PlayIndexRouteImport.update({
   id: '/play/',
   path: '/play/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MicroInfrastructureIndexRoute =
+  MicroInfrastructureIndexRouteImport.update({
+    id: '/micro-infrastructure/',
+    path: '/micro-infrastructure/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const MapIndexRoute = MapIndexRouteImport.update({
+  id: '/map/',
+  path: '/map/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ExploreIndexRoute = ExploreIndexRouteImport.update({
@@ -36,76 +56,109 @@ const ExploreIndexRoute = ExploreIndexRouteImport.update({
   path: '/explore/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ExplorePhase2Route = ExplorePhase2RouteImport.update({
-  id: '/explore/phase-2',
-  path: '/explore/phase-2',
+const BenefitsIndexRoute = BenefitsIndexRouteImport.update({
+  id: '/benefits/',
+  path: '/benefits/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ExplorePhase1Route = ExplorePhase1RouteImport.update({
-  id: '/explore/phase-1',
-  path: '/explore/phase-1',
+const MapPhase2Route = MapPhase2RouteImport.update({
+  id: '/map/phase-2',
+  path: '/map/phase-2',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MapPhase1Route = MapPhase1RouteImport.update({
+  id: '/map/phase-1',
+  path: '/map/phase-1',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/explore/phase-1': typeof ExplorePhase1Route
-  '/explore/phase-2': typeof ExplorePhase2Route
+  '/map/phase-1': typeof MapPhase1Route
+  '/map/phase-2': typeof MapPhase2Route
+  '/benefits': typeof BenefitsIndexRoute
   '/explore': typeof ExploreIndexRoute
+  '/map': typeof MapIndexRoute
+  '/micro-infrastructure': typeof MicroInfrastructureIndexRoute
   '/play': typeof PlayIndexRoute
+  '/testimonies': typeof TestimoniesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/explore/phase-1': typeof ExplorePhase1Route
-  '/explore/phase-2': typeof ExplorePhase2Route
+  '/map/phase-1': typeof MapPhase1Route
+  '/map/phase-2': typeof MapPhase2Route
+  '/benefits': typeof BenefitsIndexRoute
   '/explore': typeof ExploreIndexRoute
+  '/map': typeof MapIndexRoute
+  '/micro-infrastructure': typeof MicroInfrastructureIndexRoute
   '/play': typeof PlayIndexRoute
+  '/testimonies': typeof TestimoniesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/explore/phase-1': typeof ExplorePhase1Route
-  '/explore/phase-2': typeof ExplorePhase2Route
+  '/map/phase-1': typeof MapPhase1Route
+  '/map/phase-2': typeof MapPhase2Route
+  '/benefits/': typeof BenefitsIndexRoute
   '/explore/': typeof ExploreIndexRoute
+  '/map/': typeof MapIndexRoute
+  '/micro-infrastructure/': typeof MicroInfrastructureIndexRoute
   '/play/': typeof PlayIndexRoute
+  '/testimonies/': typeof TestimoniesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/about'
-    | '/explore/phase-1'
-    | '/explore/phase-2'
+    | '/map/phase-1'
+    | '/map/phase-2'
+    | '/benefits'
     | '/explore'
+    | '/map'
+    | '/micro-infrastructure'
     | '/play'
+    | '/testimonies'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
-    | '/explore/phase-1'
-    | '/explore/phase-2'
+    | '/map/phase-1'
+    | '/map/phase-2'
+    | '/benefits'
     | '/explore'
+    | '/map'
+    | '/micro-infrastructure'
     | '/play'
+    | '/testimonies'
   id:
     | '__root__'
     | '/'
     | '/about'
-    | '/explore/phase-1'
-    | '/explore/phase-2'
+    | '/map/phase-1'
+    | '/map/phase-2'
+    | '/benefits/'
     | '/explore/'
+    | '/map/'
+    | '/micro-infrastructure/'
     | '/play/'
+    | '/testimonies/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  ExplorePhase1Route: typeof ExplorePhase1Route
-  ExplorePhase2Route: typeof ExplorePhase2Route
+  MapPhase1Route: typeof MapPhase1Route
+  MapPhase2Route: typeof MapPhase2Route
+  BenefitsIndexRoute: typeof BenefitsIndexRoute
   ExploreIndexRoute: typeof ExploreIndexRoute
+  MapIndexRoute: typeof MapIndexRoute
+  MicroInfrastructureIndexRoute: typeof MicroInfrastructureIndexRoute
   PlayIndexRoute: typeof PlayIndexRoute
+  TestimoniesIndexRoute: typeof TestimoniesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -124,11 +177,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/testimonies/': {
+      id: '/testimonies/'
+      path: '/testimonies'
+      fullPath: '/testimonies'
+      preLoaderRoute: typeof TestimoniesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/play/': {
       id: '/play/'
       path: '/play'
       fullPath: '/play'
       preLoaderRoute: typeof PlayIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/micro-infrastructure/': {
+      id: '/micro-infrastructure/'
+      path: '/micro-infrastructure'
+      fullPath: '/micro-infrastructure'
+      preLoaderRoute: typeof MicroInfrastructureIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/map/': {
+      id: '/map/'
+      path: '/map'
+      fullPath: '/map'
+      preLoaderRoute: typeof MapIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/explore/': {
@@ -138,18 +212,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ExploreIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/explore/phase-2': {
-      id: '/explore/phase-2'
-      path: '/explore/phase-2'
-      fullPath: '/explore/phase-2'
-      preLoaderRoute: typeof ExplorePhase2RouteImport
+    '/benefits/': {
+      id: '/benefits/'
+      path: '/benefits'
+      fullPath: '/benefits'
+      preLoaderRoute: typeof BenefitsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/explore/phase-1': {
-      id: '/explore/phase-1'
-      path: '/explore/phase-1'
-      fullPath: '/explore/phase-1'
-      preLoaderRoute: typeof ExplorePhase1RouteImport
+    '/map/phase-2': {
+      id: '/map/phase-2'
+      path: '/map/phase-2'
+      fullPath: '/map/phase-2'
+      preLoaderRoute: typeof MapPhase2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/map/phase-1': {
+      id: '/map/phase-1'
+      path: '/map/phase-1'
+      fullPath: '/map/phase-1'
+      preLoaderRoute: typeof MapPhase1RouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -158,10 +239,14 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  ExplorePhase1Route: ExplorePhase1Route,
-  ExplorePhase2Route: ExplorePhase2Route,
+  MapPhase1Route: MapPhase1Route,
+  MapPhase2Route: MapPhase2Route,
+  BenefitsIndexRoute: BenefitsIndexRoute,
   ExploreIndexRoute: ExploreIndexRoute,
+  MapIndexRoute: MapIndexRoute,
+  MicroInfrastructureIndexRoute: MicroInfrastructureIndexRoute,
   PlayIndexRoute: PlayIndexRoute,
+  TestimoniesIndexRoute: TestimoniesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
