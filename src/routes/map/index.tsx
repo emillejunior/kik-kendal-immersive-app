@@ -1,11 +1,12 @@
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { motion } from 'motion/react';
+import { ArrowLeftCircle } from 'lucide-react';
 
 // assets
 import mapBg from '../../assets/kik-map-bg.jpg';
 
 // components
-import { Button } from '../../components/ui/button';
+import { Button } from '@/components/ui/button';
 import { ContentRenderer } from '@/components/content-renderer';
 import { MapFull } from '@/components/map/map-full';
 
@@ -39,6 +40,13 @@ function explore() {
               <Link to="/map/phase-2">{copy.nav.phase2}</Link>
             </Button>
           </div>
+        </div>
+        <div className="flex w-full items-center justify-center gap-3 text-center">
+          <Button variant={'secondary'} asChild>
+            <Link to="/explore">
+              <ArrowLeftCircle className="h-12 w-12" /> Back
+            </Link>
+          </Button>
         </div>
       </div>
       <MapFull />

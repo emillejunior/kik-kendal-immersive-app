@@ -1,9 +1,9 @@
-import { Button } from '@/components/ui/button';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { motion } from 'motion/react';
+import { ArrowLeftCircle, Play } from 'lucide-react';
 
 // components
-// import { Button } from '../../components/ui/button';
+import { Button } from '@/components/ui/button';
 
 export const Route = createFileRoute('/benefits/')({
   component: benefits,
@@ -21,10 +21,24 @@ function benefits() {
         >
           Benefits of KIK & SEZ
         </motion.h1>
+        <p className="max-w-prose">
+          Discover the key advantages that make Kendal Industrial Park a prime destination for
+          investment and growth. From strategic location to SEZ-exclusive incentives, this video
+          highlights why global businesses choose to build their future here.
+        </p>
 
-        <Button size={'lg'} variant={'outline'} asChild>
-          <Link to="/explore">Back</Link>
-        </Button>
+        <div className="flex gap-4">
+          <Button size={'lg'} variant={'default'}>
+            <Play fill="currentColor" className="block size-4 animate-pulse" />
+            Play
+          </Button>
+          <Button size={'lg'} variant={'outline'} asChild>
+            <Link to="/explore">
+              <ArrowLeftCircle />
+              Back
+            </Link>
+          </Button>
+        </div>
       </div>
     </div>
   );

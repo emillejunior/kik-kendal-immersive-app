@@ -1,9 +1,9 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
-import { Header } from '../components/header';
+import { Header } from '@/components/header';
 import { ThemeProvider } from '@/components/theme-provider';
-import patternImage from '../assets/pattern.png';
-import ScreenSizeGate from '../components/screen-size-gate';
+import patternImage from '@/assets/pattern.png';
+import ScreenSizeGate from '@/components/screen-size-gate';
 
 const RootLayout = () => (
   <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
