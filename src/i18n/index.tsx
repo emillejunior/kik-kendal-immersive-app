@@ -22,7 +22,9 @@ const TRANSLATIONS = {
     },
     pages: {
       index: {
-        title: 'Welcome to Kendal Industrial Park',
+        title: 'Welcome to',
+        title2: 'Kendal Industrial Park',
+        title3: 'Special Economic Zone',
         blocks: [
           {
             id: 'a1',
@@ -98,7 +100,11 @@ const TRANSLATIONS = {
     },
     pages: {
       index: {
-        title: `"켄달 산업단지"에 오신 것을 환영합니다`,
+        // title: `"켄달 산업단지"에 오신 것을 환영합니다`,
+        title: '환영합니다',
+        title2: '켄달 산업단지',
+        title3: '경제자유구역',
+
         blocks: [
           {
             id: 'a1',
@@ -174,7 +180,11 @@ const TRANSLATIONS = {
     },
     pages: {
       index: {
-        title: '欢迎来到肯达尔工业园区',
+        // title: '欢迎来到肯达尔工业园区',
+        title: '欢迎来到',
+        title2: '肯达尔工业园区',
+        title3: '特别经济区',
+
         blocks: [
           {
             id: 'a1',

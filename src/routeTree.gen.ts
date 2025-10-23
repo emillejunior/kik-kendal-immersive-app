@@ -19,6 +19,7 @@ import { Route as ExploreIndexRouteImport } from './routes/explore/index'
 import { Route as BenefitsIndexRouteImport } from './routes/benefits/index'
 import { Route as MapPhase2RouteImport } from './routes/map/phase-2'
 import { Route as MapPhase1RouteImport } from './routes/map/phase-1'
+import { Route as Map3dRouteImport } from './routes/map/3d'
 
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
@@ -71,10 +72,16 @@ const MapPhase1Route = MapPhase1RouteImport.update({
   path: '/map/phase-1',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Map3dRoute = Map3dRouteImport.update({
+  id: '/map/3d',
+  path: '/map/3d',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/map/3d': typeof Map3dRoute
   '/map/phase-1': typeof MapPhase1Route
   '/map/phase-2': typeof MapPhase2Route
   '/benefits': typeof BenefitsIndexRoute
@@ -87,6 +94,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/map/3d': typeof Map3dRoute
   '/map/phase-1': typeof MapPhase1Route
   '/map/phase-2': typeof MapPhase2Route
   '/benefits': typeof BenefitsIndexRoute
@@ -100,6 +108,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/map/3d': typeof Map3dRoute
   '/map/phase-1': typeof MapPhase1Route
   '/map/phase-2': typeof MapPhase2Route
   '/benefits/': typeof BenefitsIndexRoute
@@ -114,6 +123,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/map/3d'
     | '/map/phase-1'
     | '/map/phase-2'
     | '/benefits'
@@ -126,6 +136,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/map/3d'
     | '/map/phase-1'
     | '/map/phase-2'
     | '/benefits'
@@ -138,6 +149,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/map/3d'
     | '/map/phase-1'
     | '/map/phase-2'
     | '/benefits/'
@@ -151,6 +163,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  Map3dRoute: typeof Map3dRoute
   MapPhase1Route: typeof MapPhase1Route
   MapPhase2Route: typeof MapPhase2Route
   BenefitsIndexRoute: typeof BenefitsIndexRoute
@@ -233,12 +246,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MapPhase1RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/map/3d': {
+      id: '/map/3d'
+      path: '/map/3d'
+      fullPath: '/map/3d'
+      preLoaderRoute: typeof Map3dRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  Map3dRoute: Map3dRoute,
   MapPhase1Route: MapPhase1Route,
   MapPhase2Route: MapPhase2Route,
   BenefitsIndexRoute: BenefitsIndexRoute,

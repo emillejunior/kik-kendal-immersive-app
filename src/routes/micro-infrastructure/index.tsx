@@ -8,11 +8,11 @@ import { Button } from '@/components/ui/button';
 // assets
 import fireBrigade from '@/assets/infrastructure/fire-brigade.jpeg';
 import hangar from '@/assets/infrastructure/hangar.jpeg';
-import placeOfWorship from '@/assets/infrastructure/place-of-worship.jpeg';
-import plnMv from '@/assets/infrastructure/pln-mv.jpeg';
+// import placeOfWorship from '@/assets/infrastructure/place-of-worship.jpeg';
+// import plnMv from '@/assets/infrastructure/pln-mv.jpeg';
 import reservoir from '@/assets/infrastructure/reservoir.jpeg';
 import switchyard from '@/assets/infrastructure/switchyard.jpeg';
-import truckParking from '@/assets/infrastructure/truck-parking.jpeg';
+// import truckParking from '@/assets/infrastructure/truck-parking.jpeg';
 import wasteWaterTreatment from '@/assets/infrastructure/waste-water-treatment.jpeg';
 
 export const Route = createFileRoute('/micro-infrastructure/')({
@@ -20,11 +20,11 @@ export const Route = createFileRoute('/micro-infrastructure/')({
 });
 
 const facilities = [
-  { id: 'truck-parking', name: 'Truck Parking', image: truckParking },
+  // { id: 'truck-parking', name: 'Truck Parking', image: truckParking },
   { id: 'switchyard', name: 'Switchyard', image: switchyard },
-  { id: 'hangar', name: 'Hangar', image: hangar },
-  { id: 'pln-mv', name: 'Existing PLN MV', image: plnMv },
-  { id: 'place-of-worship', name: 'Place of Worship', image: placeOfWorship },
+  { id: 'hangar', name: 'Custom Clearance Area', image: hangar },
+  // { id: 'pln-mv', name: 'Existing PLN MV', image: plnMv },
+  // { id: 'place-of-worship', name: 'Place of Worship', image: placeOfWorship },
   { id: 'fire-brigade', name: 'Fire Brigade', image: fireBrigade },
   { id: 'waste-water-treatment', name: 'Waste Water Treatment', image: wasteWaterTreatment },
   { id: 'reservoir', name: 'Reservoir', image: reservoir },
@@ -48,9 +48,10 @@ function microInfrastructure() {
           transition={{ duration: 1, delay: 0.25 }}
           className="max-w-prose space-y-4"
         >
+          <h2>Explore the essential infrastructures that power our ecosystem.</h2>
           <p>
-            Explore the essential infrastructures that power our ecosystem. Select an item to
-            highlight it on the maquette and see exactly where it fits in our integrated plan.
+            Select an item to highlight it on the maquette to see where it fits in our integrated
+            plan.
           </p>
         </motion.div>
         <motion.div

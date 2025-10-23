@@ -1,5 +1,5 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router';
-import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
+// import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import { Header } from '@/components/header';
 import { ThemeProvider } from '@/components/theme-provider';
 import patternImage from '@/assets/pattern.png';
@@ -26,7 +26,7 @@ const RootLayout = () => (
         />
       </div>
     </ScreenSizeGate>
-    <TanStackRouterDevtools />
+    {/* <TanStackRouterDevtools /> */}
   </ThemeProvider>
 );
 
