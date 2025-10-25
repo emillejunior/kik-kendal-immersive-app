@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import fireBrigade from '@/assets/infrastructure/fire-brigade.jpeg';
 import hangar from '@/assets/infrastructure/hangar.jpeg';
 // import placeOfWorship from '@/assets/infrastructure/place-of-worship.jpeg';
-// import plnMv from '@/assets/infrastructure/pln-mv.jpeg';
+import plnMv from '@/assets/infrastructure/pln-mv.jpeg';
 import reservoir from '@/assets/infrastructure/reservoir.jpeg';
 import switchyard from '@/assets/infrastructure/switchyard.jpeg';
 // import truckParking from '@/assets/infrastructure/truck-parking.jpeg';
@@ -21,9 +21,9 @@ export const Route = createFileRoute('/micro-infrastructure/')({
 
 const facilities = [
   // { id: 'truck-parking', name: 'Truck Parking', image: truckParking },
-  { id: 'switchyard', name: 'Switchyard', image: switchyard },
+  { id: 'switchyard', name: 'High Voltage Switchyard', image: switchyard },
   { id: 'hangar', name: 'Custom Clearance Area', image: hangar },
-  // { id: 'pln-mv', name: 'Existing PLN MV', image: plnMv },
+  { id: 'pln-mv', name: 'Existing MV Substation', image: plnMv },
   // { id: 'place-of-worship', name: 'Place of Worship', image: placeOfWorship },
   { id: 'fire-brigade', name: 'Fire Brigade', image: fireBrigade },
   { id: 'waste-water-treatment', name: 'Waste Water Treatment', image: wasteWaterTreatment },

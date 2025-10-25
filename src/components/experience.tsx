@@ -9,7 +9,11 @@ import LoadingAnimation from './loading-animation';
 // import PointOfInterests from './PointOfInterests'
 // import CameraResetWrapper from './CameraResetWrapper'
 
-import Model from './models/model';
+// import Model from './models/model';
+import TableModel from './models/table-model';
+import RoadsModel from './models/roads-model';
+import BuildingsModel from './models/buildings-model';
+import SegmentsModel from './models/segments-model';
 // import MaquetteTable from './models/table';
 // import RoadsModel from './models/roads';
 
@@ -54,7 +58,11 @@ export default function Experience() {
     <>
       <Suspense fallback={<LoadingAnimation />}>
         <>
-          <Model />
+          <BuildingsModel />
+          <SegmentsModel />
+          <RoadsModel />
+          {/* <TableModel /> */}
+          {/* <Model /> */}
           {/* <RoadsModel /> */}
         </>
       </Suspense>
